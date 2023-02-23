@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.pojos.Mess_Subscription;
-import com.app.repository.MessSubscriptionRepository;
+import com.app.Repository.MessSubscriptionRepository;
 @Service
 public class MessSubscriptionService {
 	@Autowired

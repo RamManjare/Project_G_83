@@ -1,4 +1,4 @@
-package com.app.repository;
+package com.app.Repository;
 
 
 import java.util.List;
@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.app.pojos.Mess_Subscription;
+
+
+@Transactional
+@Repository
 public interface MessSubscriptionRepository extends JpaRepository<Mess_Subscription, Integer>{
 
 	@Query("Select  m.subscription_id from Mess_Subscription m where mess_id= :mess_id ")

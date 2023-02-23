@@ -2,6 +2,8 @@ package com.app.service;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,6 +12,8 @@ import com.app.Repository.UserInfoRepository;
 import com.app.pojos.LoginDetails;
 import com.app.pojos.User_info;
 import com.app.custom_exceptions.ResourceNotFoundException;
+
+//import com.app.dto.LoginRequestDto;
 @Service
 @Transactional
 public class UserInfoService {
@@ -59,4 +63,9 @@ public LoginDetails checkLogin(String email, String password) {
 	 System.out.println(loginDetails.toString());
 	return loginDetails;
 }
+//public LoginDetails authenticateEmp(LoginRequestDto dto) {
+//	// TODO Auto-generated method stub
+//	return userInfoRepo.findByEmailAndPassword(dto.getEmail(), dto.getPassword())
+//			.orElseThrow(() -> new ResourceNotFoundException("Bad Credentials !!!!!"));
+//}
 }
