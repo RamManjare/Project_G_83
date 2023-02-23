@@ -15,13 +15,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-<<<<<<< HEAD
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-=======
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
->>>>>>> 2215f5777587202648ce1f60a594dc7e3d393dae
+
 
 @Entity
 @Table(name="user_info")
