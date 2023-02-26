@@ -1,0 +1,26 @@
+							
+		Login			
+Admin		Add Mess Owner	
+		Remove Mess Owner		
+		Generate Document							
+
+
+		Create Account					
+Consumer 	Update Account						
+		View Membership Status					
+		Give Ratings and feedback			
+		View Categorization of mess
+		View Categorization of mess
+		Delete Account		
+
+		Create Account
+Mess Owner	Manage Accoun
+		Approve Membership
+		Update Menus
+		View Ratings and Feedback
+
+
+USED CASES			
+							
+							
+							

@@ -1,0 +1,22 @@
+
+INSERT INTO `user_type` VALUES (10,'Customer'),(20,'Mess Owner'),(30,'Admin');
+
+insert into user_info values(101,'1234567981','Malkapur','9552177430','sagar@gmail.com','Sagar Satav','sagar@123',30);
+
+INSERT INTO user_info VALUES (102,'5426415815','Pune','9934553525','ram@gmail.com','Ram Manjare','ram@123',20),(103,'3322641515','Pune','9932353525','shubham@gmail.com','Shuham ','shubham@123',10)
+
+INSERT INTO `registered_mess` VALUES (1001,'ravet','mess_1',50,1111),(1002,'ravet','Mess_2',70,2222)
+
+INSERT INTO `menu_table` VALUES (1502,'2023-01-02','Mini Rice Plate',1001,40),(1503,'2023-01-02','Rice Plate',1002,60);
+
+INSERT INTO `mess_owner` VALUES (701,1001,102);
+
+INSERT INTO `mess_subscription` VALUES(201,'2022-02-01 00:00:00',1001,'2022-01-01 00:00:00',15,103) customer
+
+INSERT INTO `mess_membership_status` VALUES (50,'Active'),(60,'Pending'),(70,'Rejected');
+
+INSERT INTO `ratings` VALUES (711,1001,"Good taste",'2022-02-21 00:00:00',4,103);
+
+INSERT INTO `mess_type` VALUES (1111,'Veg'),(2222,'Non-Veg');
+
+INSERT INTO `subscription_status` VALUES (15,'Active'),(25,'Inactive');
