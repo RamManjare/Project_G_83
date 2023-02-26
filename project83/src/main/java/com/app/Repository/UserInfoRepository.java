@@ -14,6 +14,7 @@ public interface UserInfoRepository extends JpaRepository<User_info, Integer> {
 	@Query("Select u.user_id, u.name from User_info u where email_id= :email and password= :password")
 	public List<Object []> checkLogin(String email,String password);
 
+	
 	//public Optional<User_info> findByEmailAndPassword(String email, String password);
 
 }

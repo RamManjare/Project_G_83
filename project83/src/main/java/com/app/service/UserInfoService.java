@@ -16,10 +16,10 @@ import com.app.custom_exceptions.ResourceNotFoundException;
 //import com.app.dto.LoginRequestDto;
 @Service
 @Transactional
-public class UserInfoService {
+public class UserInfoService implements IUserInfoService  {
   @Autowired
   UserInfoRepository userInfoRepo;
-
+@Override
 public User_info getUser(int UserInfoId) {
 
 	System.out.println(UserInfoId+"<--------------->");
@@ -35,19 +35,38 @@ public User_info getUser(int UserInfoId) {
 	}
 	
 }
-
+@Override
 public User_info saveUser(User_info u) {
 
 		return userInfoRepo.save(u);
 	
 	
 }
-
+@Override
 public List<User_info> getAll() {
 
 	return userInfoRepo.findAll();
 }
+@Override
+public String deleteUserDetails(int userInfoId) {
+	if(userInfoRepo.existsById(userInfoId)) 
+	{
+		userInfoRepo.deleteById(userInfoId);
+		return "user details deleted ....";
+	}
+	return "Deletion Failed : Invalid user Id !!!!!!!!!!!";
+}
 
+@Override
+public User_info updateUserDetails(User_info detachedUser) {
+	// confirm if user with id exists !
+	if (userInfoRepo.existsById(detachedUser.getUser_id())) {
+		userInfoRepo.save(detachedUser);
+	}
+	return detachedUser;
+}
+
+@Override
 public LoginDetails checkLogin(String email, String password) {
 	 List<Object []> u=userInfoRepo.checkLogin(email, password);
 	 User_info user=null;
@@ -68,4 +87,8 @@ public LoginDetails checkLogin(String email, String password) {
 //	return userInfoRepo.findByEmailAndPassword(dto.getEmail(), dto.getPassword())
 //			.orElseThrow(() -> new ResourceNotFoundException("Bad Credentials !!!!!"));
 //}
+
+
+
+
 }

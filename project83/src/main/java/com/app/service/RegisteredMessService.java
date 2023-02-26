@@ -28,7 +28,7 @@ public class RegisteredMessService {
 	public List<Registered_Mess> getAllMess() 
 	{
 		List<Registered_Mess> m=registeredMessRepo.findAll();
-		System.out.println(m.get(0).getMess_name());
+		//System.out.println(m.get(0).getMess_name());
 		return m;
 	}
 	
