@@ -1,6 +1,7 @@
 package com.app.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.validation.annotation.Validated;
-
 
 //import com.app.dto.LoginRequestDto;
 import com.app.pojos.LoginDetails;
@@ -52,20 +52,20 @@ public class User_infoController {
 	public List<User_info> getAll() {
 		return userInfoService.getAll();
 	}
-
-	@DeleteMapping("/{UserInfoId}")
-	public String deleteUserDetails(@PathVariable int UserInfoId)
-	{
-		System.out.println("in del emp "+UserInfoId);
-		return userInfoService.deleteUserDetails(UserInfoId);
-	}
+//
+//	@DeleteMapping("/{UserInfoId}")
+//	public String deleteUserDetails(@PathVariable int UserInfoId)
+//	{
+//		System.out.println("in del emp "+UserInfoId);
+//		return userInfoService.deleteUserDetails(UserInfoId);
+//	}
 	 
-	@PutMapping
-	public User_info updateUserDetails(@RequestBody User_info detachedUser)
-	{
-		System.out.println("in update user "+detachedUser.getUser_id());//not null
-		return userInfoService.updateUserDetails(detachedUser);
-	}
+//	@PutMapping
+//	public User_info updateUserDetails(@RequestBody User_info detachedUser)
+//	{
+//		System.out.println("in update user "+detachedUser.getUser_id());//not null
+//		return userInfoService.updateUserDetails(detachedUser);
+//	}
 	
 //	@PutMapping("/{UserInfoId}")
 //	public User_info updateUserDetails(@PathVariable int UserInfoId ,@RequestBody User_info detachedUser)
@@ -78,8 +78,8 @@ public class User_infoController {
 		return userInfoService.checkLogin(u.getEmail_id(), u.getPassword());
 	}
 	
-//	@PostMapping("/login")
-//	public LoginDetails validateUser(@RequestBody LoginRequestDto dto)
+//	@PostMapping("/signin")
+//	public Optional<User_info> validateUser(@RequestBody LoginRequestDto dto)
 //	{
 //		System.out.println("in user signin "+dto);
 //		return userInfoService.authenticateEmp(dto);

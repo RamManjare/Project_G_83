@@ -58,6 +58,7 @@ public class User_info
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "userInfo")
 	private List<Mess_Subscription> messSubscription=new LinkedList();
 	
+
 	public User_info() 
 	{
 		super();

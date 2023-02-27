@@ -1,6 +1,7 @@
 package com.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -70,7 +71,7 @@ public User_info updateUserDetails(User_info detachedUser) {
 public LoginDetails checkLogin(String email, String password) {
 	 List<Object []> u=userInfoRepo.checkLogin(email, password);
 	 User_info user=null;
-	 System.out.println(u.get(0)[0]);
+	// System.out.println(u.get(0)[0]);
 	 int id=(int)u.get(0)[0];
 	 user=getUser(id);
 	 LoginDetails loginDetails=new LoginDetails();
@@ -82,10 +83,9 @@ public LoginDetails checkLogin(String email, String password) {
 	 System.out.println(loginDetails.toString());
 	return loginDetails;
 }
-//public LoginDetails authenticateEmp(LoginRequestDto dto) {
+//public Optional<User_info> authenticateEmp(LoginRequestDto dto) {
 //	// TODO Auto-generated method stub
-//	return userInfoRepo.findByEmailAndPassword(dto.getEmail(), dto.getPassword())
-//			.orElseThrow(() -> new ResourceNotFoundException("Bad Credentials !!!!!"));
+//	return userInfoRepo.findByEmailAndPassword(dto.getEmail(), dto.getPassword());
 //}
 
 

@@ -28,7 +28,7 @@ public class User_Type {
 	@JsonIgnoreProperties("userType")
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="userType")
 	private Set<User_info> userInfo=new HashSet();
-
+//at most one null remove duplication
 	public User_Type() {
 		super();
 	}
@@ -59,7 +59,7 @@ public class User_Type {
 	public Set<User_info> getUserInfo() {
 		return userInfo;
 	}
-
+//for iterate 
 	public void setUserInfo(Set<User_info> userInfo) 
 	{
 		for(User_info u: userInfo)
