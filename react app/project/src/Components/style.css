@@ -1,0 +1,14 @@
+.info {
+    text-decoration-style: solid;
+    font-family: Arial;
+    color: black;
+   
+    color: black;
+}
+
+nav {
+
+    text-shadow: -1px -1px 0 rgb(248, 249, 243), 1px -1px 0 rgb(242, 242, 238), -1px 1px 0 rgb(249, 244, 244), 1px 1px 0 rgb(246, 245, 245);
+       color: blue;
+}
+/*text-shadow: -1px -1px 0 white , 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;*/
