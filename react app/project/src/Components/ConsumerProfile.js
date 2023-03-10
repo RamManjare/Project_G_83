@@ -33,7 +33,7 @@ export default function ConsumerProfile() {
                     <li className="nav-item"><Link className="nav-link" to="/ConsumerHome" style={{ color: "blue" }}><b>Home</b></Link> </li>
                     <li className="nav-item"><Link className="nav-link" to="/ConsumerProfile" style={{ color: "blue" }}><b>Profile</b></Link> </li>
                     <li className="nav-item"><Link className="nav-link" to="/AllMessInfo" style={{ color: "blue" }}><b>Available Mess Details</b></Link> </li>
-                    <li className="nav-item"><Link className="nav-link" to="/mymess" ><b>Registered Mess</b></Link> </li>
+                    <li className="nav-item"><Link className="nav-link" to="/mymess" ><b>Subscribed Mess</b></Link> </li>
                     <li className="nav-item" onClick={logout} ><Link className="nav-link" to="/Homepage" ><b>Log Out</b></Link> </li>
                 </ul>
             </nav>
@@ -41,10 +41,10 @@ export default function ConsumerProfile() {
 
             <h2 className='info' style={{ color: "red" }}><b><u>Profile</u></b></h2>
             <br />
-            <h4 className='info' style={{ color: "red", textAlign: 'center' }} > Registration ID :  {JSON.parse(localStorage.getItem("loggedinusercon")).user_id} </h4>
-            <h4 className='info' style={{ color: "red", textAlign: 'center' }}>   Name :  {JSON.parse(localStorage.getItem("loggedinusercon")).name} </h4>
-            <h4 className='info' style={{ color: "red", textAlign: 'center' }}> City :  {JSON.parse(localStorage.getItem("loggedinusercon")).address} </h4>
-            <h4 className='info' style={{ color: "red", textAlign: 'center' }}>  Mail Id :  {JSON.parse(localStorage.getItem("loggedinusercon")).email_id} </h4>
+            <h4 className='info' style={{ color: "red", textAlign: 'center' }} >Registration ID :  {JSON.parse(localStorage.getItem("loggedinusercon")).user_id} </h4>
+            <h4 className='info' style={{ color: "red", textAlign: 'center' }}> Name :  {JSON.parse(localStorage.getItem("loggedinusercon")).name} </h4>
+            <h4 className='info' style={{ color: "red", textAlign: 'center' }}> City :   {JSON.parse(localStorage.getItem("loggedinusercon")).address} </h4>
+            <h4 className='info' style={{ color: "red", textAlign: 'center' }}> Mail Id :  {JSON.parse(localStorage.getItem("loggedinusercon")).email_id} </h4>
 
         </div>
 

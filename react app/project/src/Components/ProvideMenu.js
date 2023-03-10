@@ -136,7 +136,7 @@ export default function ProvideMenu() {
                 <br /> <br />
             </nav>
 
-            <h3 style={{ color: "green" }}>-- All Consumer List --</h3>
+            <h3 style={{ color: "green" }}>-- All Menu List --</h3>
             <br /><br />
             <Table striped bordered hover responsive="md">
                 <thead style={{ color: "green" }}>

@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-
+import image from '../images/08cc6e104723621.5f698671656dc.png';
 class Aboutus extends React.Component {
 
     constructor(props) {
@@ -31,12 +31,16 @@ class Aboutus extends React.Component {
                 <br />
 
                 <h1 className="info" style={{ color: "Tomato", textDecorationLine: 'underline', textAlign: "center" }}> FOOD-HOME </h1>
+                <br></br>
+                     {/* <img src={image} height="40%" width="90%"  /> */}
+                <h4  className="info" style={{ color: "Black", textAlign: "center" }}> <img src={image} height="400px" width="100%"  /><br></br>   
+      </h4>
                 <br />
 
 
 
 
-                <hr></hr>
+         
 
 
             </div>
